@@ -1,0 +1,25 @@
+<div class="text-center">
+  <h2>{{title}}</h2>
+  <p>{{content}}</p>
+  <p>Created by {{user.username}} on {{format_date date_created}}</p>
+  
+ 
+</div>
+<div class="row">
+{{#each post.comments}}
+
+{{/each}}
+</div>
+
+{{#if logged_in}}
+<!---input form to create new comment---->
+{{else}}
+<!---A message saying that you need to be logged in to comment--->
+{{/if}}
+
+<!---Do Logic To render Comments---->
+<!-----Do Logic to create new comment and do the fecth to post on comment.js in public, route to post will be in comment-routes.js----->
+
+  {{#if logged_in}}
+  <script src="/js/comment.js"></script>
+  {{/if}}

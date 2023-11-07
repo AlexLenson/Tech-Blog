@@ -15,6 +15,8 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+//to add an update route
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const projectData = await Project.destroy({
